@@ -1,0 +1,37 @@
+ #include <iostream>
+ using namespace std;
+
+int main()
+{
+    int rowcount, colcount;
+    // int colcount;
+    cout << "Enter Your rowcount : " << endl;
+    cin >> rowcount;
+    cout << "Your rowcount is " << rowcount << endl;
+    cout << "Enter Your colcount : " << endl;
+    cin >> colcount;
+    cout << "Your colcount is : " << colcount << endl;
+    for (int row = 0; row < rowcount; row += 1)
+    {
+        if (row == 0 || row == rowcount-1)
+        {
+            for (int col = 0; col < colcount; col += 1)
+            {
+                cout << "* ";
+            }
+        }
+        else
+        {
+            cout << "* ";
+            for (int co_l = 0; co_l < colcount - 2; co_l += 1)
+            {
+                cout << "  ";
+            }
+            cout << "* ";
+        }
+
+        cout << endl;
+    }
+
+    return 0;
+}
